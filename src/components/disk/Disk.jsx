@@ -56,7 +56,7 @@ const Disk = () => {
                     <button className="disk__back" onClick={() => backClickHandler()}>BACK</button>
                     <button className="disk__create" onClick={() => showPopupHandler()}>Create directory</button>
                     <div className="disk__upload">
-                        <label htmlFor="disk__upload-input" className="disk__upload-label">Download file</label>
+                        <label htmlFor="disk__upload-input" className="disk__upload-label">Upload file</label>
                         <input multiple={true} onChange={(event)=> fileUploadHandler(event)} type="file" id="disk__upload-input" className="disk__upload-input"/>
                     </div>
                 </div>

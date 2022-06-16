@@ -53,10 +53,10 @@ const Disk = () => {
     return ( !dragEnter ?
             <div className="disk" onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
                 <div className="disk__btns">
-                    <button className="disk__back" onClick={() => backClickHandler()}>Назад</button>
-                    <button className="disk__create" onClick={() => showPopupHandler()}>Создать папку</button>
+                    <button className="disk__back" onClick={() => backClickHandler()}>BACK</button>
+                    <button className="disk__create" onClick={() => showPopupHandler()}>Create directory</button>
                     <div className="disk__upload">
-                        <label htmlFor="disk__upload-input" className="disk__upload-label">Загрузить файл</label>
+                        <label htmlFor="disk__upload-input" className="disk__upload-label">Download file</label>
                         <input multiple={true} onChange={(event)=> fileUploadHandler(event)} type="file" id="disk__upload-input" className="disk__upload-input"/>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const Disk = () => {
             </div>
             :
             <div className="drop-area" onDrop={dropHandler} onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
-                Перетащите файлы сюда
+                Drag Your Files Here
             </div>
     );
 };

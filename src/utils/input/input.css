@@ -1,0 +1,31 @@
+input {
+    border: none;
+    border-bottom: #ff6600 solid 3px;
+    background: transparent;
+    width: 100%;
+    padding: 3px;
+}
+input:focus {
+    outline: none;
+    transform: scale(1.01);
+}
+::-webkit-input-placeholder {
+    /* Chrome */
+    color: #ff6600;
+    font-weight: 700;
+}
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ff6600;
+    font-weight: 700;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ff6600;
+    font-weight: 700;
+}
+:-moz-placeholder {
+    /* Firefox 4 - 18 */
+    color: #ff6600;
+    font-weight: 700;
+}

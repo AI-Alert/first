@@ -5,6 +5,7 @@ import FileList from "./fileList/FileList";
 import './disk.css'
 import Popup from "./Popup";
 import {setCurrentDir, setPopupDisplay} from "../../reducers/fileReducer";
+import Uploader from "./uploader/Uploader";
 
 const Disk = () => {
     const dispatch = useDispatch()
@@ -53,8 +54,8 @@ const Disk = () => {
     return ( !dragEnter ?
             <div className="disk" onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
                 <div className="disk__btns">
-                    <button className="disk__back" onClick={() => backClickHandler()}>BACK</button>
-                    <button className="disk__create" onClick={() => showPopupHandler()}>Create directory</button>
+                    <button className="disk__back" onClick={() => backClickHandler()}>Back</button>
+                    <button className="disk__create" onClick={() => showPopupHandler()}>Create folder</button>
                     <div className="disk__upload">
                         <label htmlFor="disk__upload-input" className="disk__upload-label">Upload file</label>
                         <input multiple={true} onChange={(event)=> fileUploadHandler(event)} type="file" id="disk__upload-input" className="disk__upload-input"/>
@@ -62,10 +63,11 @@ const Disk = () => {
                 </div>
                 <FileList/>
                 <Popup/>
+                <Uploader/>
             </div>
             :
             <div className="drop-area" onDrop={dropHandler} onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler} onDragOver={dragEnterHandler}>
-                Drag Your Files Here
+                Drag your files here
             </div>
     );
 };

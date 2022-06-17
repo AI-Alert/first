@@ -2,7 +2,9 @@ input {
     border: none;
     border-bottom: #ff6600 solid 3px;
     background: transparent;
-    width: 100%;
+    margin-right: 3%;
+    align-content: revert;
+    alignment: revert;
     padding: 3px;
 }
 input:focus {
